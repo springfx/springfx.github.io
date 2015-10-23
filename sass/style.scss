@@ -1,2 +1,6 @@
+@import "variables";
 
-@import "../bootstrap/assets/stylesheets/bootstrap";
+nav.navbar.navbar-default {
+  border: none;
+  border-top: 5px solid $brand-primary;
+}
