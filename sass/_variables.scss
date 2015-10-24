@@ -70,8 +70,12 @@ $line-height-computed:    floor(($font-size-base * $line-height-base)) !default;
 $headings-font-family:    inherit !default;
 $headings-font-weight:    500 !default;
 $headings-line-height:    1.1 !default;
-$headings-color:          inherit !default;
+//$headings-color:          inherit !default;
+$headings-color:          $brand-primary !default;
 
+h1, h2, h3, h4, h5, h6 {
+  color: #48647e;
+}
 
 //== Iconography
 //
@@ -371,7 +375,9 @@ $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2
 $navbar-collapse-max-height:       340px !default;
 
 $navbar-default-color:             #777 !default;
-$navbar-default-bg:                #f8f8f8 !default;
+//$navbar-default-bg:                #f8f8f8 !default;
+//$navbar-default-bg:                $gray-lighter !default;
+$navbar-default-bg:                #fff !default;
 $navbar-default-border:            darken($navbar-default-bg, 6.5%) !default;
 
 // Navbar links
@@ -858,7 +864,8 @@ $text-muted:                  $gray-light !default;
 //** Abbreviations and acronyms border color
 $abbr-border-color:           $gray-light !default;
 //** Headings small color
-$headings-small-color:        $gray-light !default;
+//$headings-small-color:        $gray-light !default;
+$headings-small-color:        $brand-primary !default;
 //** Blockquote small color
 $blockquote-small-color:      $gray-light !default;
 //** Blockquote font size

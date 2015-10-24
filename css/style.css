@@ -1,5 +1,28 @@
+h1, h2, h3, h4, h5, h6 {
+  color: #48647e; }
+
 nav.navbar.navbar-default {
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  -o-border-radius: 0;
+  -ms-border-radius: 0;
+  -khtml-border-radius: 0;
   border: none;
-  border-top: 5px solid #d4550b; }
+  border-top: 5px solid #d4550b;
+  border-bottom: 1px solid #d4550b; }
+
+pre.prettyprint, code.prettyprint {
+  margin-top: 25px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -o-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -khtml-border-radius: 6px;
+  border-radius: 6px;
+  padding: 12px !important; }
+
+pre.prettyprint {
+  border: 1px solid #d4550b !important;
+  background-color: white; }
 
 /*# sourceMappingURL=style.css.map */

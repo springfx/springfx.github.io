@@ -1,6 +1,37 @@
 @import "variables";
 
+@mixin clear-border-radius {
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  -o-border-radius: 0;
+  -ms-border-radius: 0;
+  -khtml-border-radius: 0;
+}
+
 nav.navbar.navbar-default {
+  @include clear-border-radius;
+
   border: none;
   border-top: 5px solid $brand-primary;
+  border-bottom: 1px solid $brand-primary;
+}
+
+$border-radius-prettyprint: $border-radius-large;
+
+pre.prettyprint, code.prettyprint {
+  margin-top: 25px;
+  -moz-border-radius: $border-radius-prettyprint;
+  -webkit-border-radius: $border-radius-prettyprint;
+  -o-border-radius: $border-radius-prettyprint;
+  -ms-border-radius: $border-radius-prettyprint;
+  -khtml-border-radius: $border-radius-prettyprint;
+  border-radius: $border-radius-prettyprint;
+  padding: $padding-base-horizontal !important;
+}
+
+pre.prettyprint {
+  //border: none !important;;
+  border: 1px solid $brand-primary !important;;
+  //background-color: $gray-lighter;
+  background-color: white;
 }

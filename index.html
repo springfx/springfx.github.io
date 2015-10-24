@@ -44,13 +44,47 @@
 </nav>
 
 <div class="container">
-    <h1>The Spring Framework meets JavaFX</h1>
-    <p>
-        Coming soon!
-    </p>
+    <h1>The Spring Framework meets JavaFX<br />
+        <!--<small></small>-->
+    </h1>
+    <hr />
+    <h2>A simple application</h2>
+    <pre class="prettyprint lang-groovy">
+class NonameApplication extends Application {
+
+    @Autowired
+    FXMLLoader fxmlLoader
+
+    ApplicationContext applicationContext
+
+    @Override
+    void start(Stage primaryStage) {
+        // Create an application context of your choice...
+        applicationContext = new ClassPathXmlApplicationContext(['application-context.xml'] as String[], false)
+
+        // ...and bind it to the current JavaFX thread
+        ApplicationContextHolder.bindContext(applicationContext, this, primaryStage)
+
+        // Ready to use auto wiring and other Spring features
+        fxmlLoader.load(...)
+
+        primaryStage.show()
+    }
+
+    @Override
+    void stop() throws Exception {
+        ApplicationContextUtils.closeContext(applicationContext)
+    }
+
+    static void main(String[] args) {
+        launch(NonameApplication, args)
+    }
+}</pre>
+
     <p>
         <a class="btn btn-lg btn-primary" href="https://github.com/springfx" role="button">Visit the repo</a>
     </p>
+
 </div> <!-- /container -->
 
 
@@ -59,6 +93,7 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.js"></script>
 <script src="js/bootstrap.js"></script>
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 </body>
 </html>
 
